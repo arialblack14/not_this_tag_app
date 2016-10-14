@@ -12,8 +12,8 @@ gem 'jbuilder', '2.4.1'
 gem 'rails_12factor', group: :production
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '~> 2.7'
+  gem 'selenium-webdriver', '2.35.1', require: false
+  gem 'capybara', '~> 2.7', require: false
 end
 
 group :development, :test do

@@ -4,15 +4,15 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  host: localhost
   username: postgres
   password: password1
+  host: localhost
 
 development:
   <<: *default
   database: tags_app_development
 
-  test:
+test:
   <<: *default
   database: tags_app_test
 
