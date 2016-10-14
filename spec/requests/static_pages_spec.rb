@@ -9,7 +9,7 @@ describe "StaticPages", :type => :request do
 
     it "should have the title 'Tags'" do
       visit '/static_pages/home'
-      expect(page).to have_title("Articles and tags | Tags App")
+      expect(page).to have_title("Home | Tags App")
     end
   end
 
