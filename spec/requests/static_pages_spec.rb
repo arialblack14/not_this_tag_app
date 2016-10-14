@@ -6,5 +6,22 @@ describe "StaticPages", :type => :request do
       visit '/static_pages/home'
       expect(page).to have_content('Tags App')
     end
+
+    it "should have the title 'Tags'" do
+      visit '/static_pages/home'
+      expect(page).to have_title("Articles and tags | Tags App")
+    end
+  end
+
+  describe "Login page" do
+    it "should have the content 'Login Page" do
+      visit '/static_pages/login'
+      expect(page).to have_content('Login')
+    end
+
+    it "should have the title 'Login" do
+      visit '/static_pages/login'
+      expect(page).to have_title('Login | Tags App')
+    end
   end
 end
