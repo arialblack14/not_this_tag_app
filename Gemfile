@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'rails', '4.2.3'
+gem 'bootstrap-sass', '3.3.6'
 gem 'pg', '0.19.0'
 gem 'sass-rails', '5.0.6'
 gem 'uglifier', '3.0.0'
