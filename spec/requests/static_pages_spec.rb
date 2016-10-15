@@ -13,15 +13,15 @@ describe "StaticPages", :type => :request do
     end
   end
 
-  describe "Login page" do
-    it "should have the content 'Login Page'" do
-      visit login_path
-      expect(page).to have_content('Login')
+  describe "Post Article page" do
+    it "should have the content 'Post Article Page'" do
+      visit post_path
+      expect(page).to have_content('Post')
     end
 
-    it "should have the title 'Login" do
-      visit login_path
-      expect(page).to have_title('Login')
+    it "should have the title 'Post'" do
+      visit post_path
+      expect(page).to have_title('Post')
     end
   end
 end
