@@ -31,5 +31,8 @@ module TagsApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Fix 'File to import not found or unreadable: boostrap.' error
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
