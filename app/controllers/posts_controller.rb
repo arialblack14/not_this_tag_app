@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  befor_action :find_post, only: [:edit, :updata, :show, :delete]
+  before_action :find_post, only: [:edit, :updata, :show, :delete]
 
   def index
     @posts = Post.all
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
     if @post.save(post_params)
       flash[:notice] = "Successfully created post!"
-      redirect_to post_path(@poth)
+      redirect_to posts_path(@poth)
     else
       flash[:notice] = "Error creating new post!"
       render :new
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   def update
     if @post.update_attributes(post_params)
       flash[:notice] = "Successfully updated post!"
-      redirect_to post_path(@posts)
+      redirect_to posts_path(@posts)
     else
       flash[:notice] = "Error updating post!"
       render :edit
@@ -50,5 +50,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :content)
+  end
+
+  def find_post
+    @post = Post.find(params[:id])
   end
 end

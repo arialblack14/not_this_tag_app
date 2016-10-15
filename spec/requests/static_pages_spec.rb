@@ -12,7 +12,7 @@ describe "StaticPages", :type => :request do
   end
 
   describe "Post Article page" do
-    before { visit post_path }
+    before { visit posts_path }
 
     it { should have_content('Post Article') }
     it { should have_title('Post') }
