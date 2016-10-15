@@ -3,25 +3,25 @@ require 'rails_helper'
 describe "StaticPages", :type => :request do
   describe "Home page" do
     it "should have the content 'Tag App'" do
-      visit '/static_pages/home'
+      visit root_path
       expect(page).to have_content('Tag App')
     end
 
     it "should have the title 'Tags'" do
-      visit '/static_pages/home'
-      expect(page).to have_title("Home | Tags App")
+      visit root_path
+      expect(page).to have_title("Home")
     end
   end
 
   describe "Login page" do
-    it "should have the content 'Login Page" do
-      visit '/static_pages/login'
+    it "should have the content 'Login Page'" do
+      visit login_path
       expect(page).to have_content('Login')
     end
 
     it "should have the title 'Login" do
-      visit '/static_pages/login'
-      expect(page).to have_title('Login | Tags App')
+      visit login_path
+      expect(page).to have_title('Login')
     end
   end
 end
