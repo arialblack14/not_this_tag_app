@@ -3,6 +3,7 @@ ruby '2.3.1'
 
 gem 'rails', '4.2.3'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'simple_form', '~> 3.2'
 gem 'sprockets-rails', '>= 2.1.4'
 gem 'pg', '0.19.0'
 gem 'sass-rails', '>= 3.2'
