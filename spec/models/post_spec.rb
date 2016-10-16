@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
 
   before do
-    @post = Post.new(title: "Lorem Ipsum", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus massa sed magna rhoncus, vitae volutpat mauris bibendum. Praesent pharetra lorem vel dui suscipit tincidunt. Aenean ornare molestie neque id tempus. Vestibulum quis eros sem. Morbi lectus massa, porttitor nec lacus aliquam, luctus rutrum ligula. Quisque quis fermentum urna, vel faucibus neque. Suspendisse potenti. Sed molestie egestas tellus, vel pharetra diam mattis quis. Vestibulum urna erat, auctor sed arcu sit amet, aliquam facilisis odio. Suspendisse aliquet est enim, ornare ultricies ipsum mattis nec.")
+    @post = Post.new(title: "Lorem Ipsum", content: "Lorem ipsum dolor sit ametum.")
   end
 
   subject { @post }
@@ -11,4 +11,14 @@ RSpec.describe Post, type: :model do
   it { should respond_to(:title) }
   it { should respond_to(:content) }
   it { should be_valid }
+
+  describe "with blank content" do
+    before { @post.content = " " }
+    it { should_not_be_valid}
+  end
+
+  describe "with blank title" do
+    before { @post.title = " " }
+    it { should_not_be_valid}
+  end
 end
