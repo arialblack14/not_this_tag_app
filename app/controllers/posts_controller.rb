@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :updata, :show, :delete]
+  before_action :find_post, only: [:edit, :update, :show, :destroy]
 
   def index
-    @posts = Post.page(params[:page]).order('created_at DESC').per_page(8)
+    @posts = if params[:tag]
+      Post.tagged_with(params[:tag]).paginate(:page => params[:page]).order('id DESC')
+    else
+      Post.page(params[:page]).order('created_at DESC').per_page(5)
+    end
   end
 
   def new
@@ -49,7 +53,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :tag_list)
   end
 
   def find_post
