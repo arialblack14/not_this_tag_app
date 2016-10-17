@@ -30,10 +30,10 @@ class PostsController < ApplicationController
 
   def update
     if @post.update_attributes(post_params)
-      flash[:notice] = "Successfully updated post!"
+      flash[:success] = "Successfully updated post!"
       redirect_to posts_path(@post)
     else
-      flash[:notice] = "Error updating post!"
+      flash[:error] = "Error updating post!"
       render :edit
     end
   end
@@ -43,10 +43,10 @@ class PostsController < ApplicationController
 
   def destroy
     if @post.destroy
-      flash[:notice] = "Successfully deleted post!"
+      flash[:success] = "Successfully deleted post!"
       redirect_to posts_path
     else
-      flash[:alert] = "Error deleting post!"
+      flash[:error] = "Error deleting post!"
     end
   end
 
