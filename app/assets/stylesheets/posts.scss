@@ -3,7 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #tag_cloud {
   line-height: 1.6em;
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.2em; }
-  .l { font-size: 1.4em; }
+  .s {
+    font-size: 0.8em;
+    color: #DCCCFF;
+  }
+
+  .m {
+    font-size: 1.2em;
+    color: #AF7AFF;
+  }
+
+  .l {
+    font-size: 1.4em;
+    color: #6F2DFC;
+  }
 }
