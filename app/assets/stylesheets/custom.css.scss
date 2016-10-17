@@ -79,3 +79,10 @@ footer {
 .time-created {
   font-size: 0.8em;
 }
+
+/* Tag cloud */
+
+#tag_cloud {
+  border: solid 1px $gray;
+  padding: 12px;
+}
