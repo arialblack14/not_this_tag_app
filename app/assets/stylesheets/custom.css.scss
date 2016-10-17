@@ -23,6 +23,15 @@ textarea {
   }
 }
 
+.jumbotron {
+  background-color: #F2FFFF;
+}
+
+.navbar {
+  background-color: #F8F8F8;
+  border-color: #E7E7E7;
+}
+
 /* typography */
 
 h1 {
@@ -83,8 +92,9 @@ footer {
 /* Tag cloud */
 
 #tag_cloud {
-  border: solid 1px #D3D9DB;
+  border: solid 1px #DEFFFE;
   padding: 12px;
+  background-color: #F2FFFF;
 }
 
 /* Post buttons */
@@ -93,4 +103,8 @@ footer {
   color: #007aff;
   background-color: #fff;
   border-color: #007aff;
+  &:hover {
+    background-color: #EDFBFF;
+  color: #007aff;
+  }
 }
