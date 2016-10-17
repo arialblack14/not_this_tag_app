@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   def update
     if @post.update_attributes(post_params)
       flash[:success] = "Successfully updated post!"
-      redirect_to posts_path(@post)
+      redirect_to post_path(@post)
     else
       flash[:error] = "Error updating post!"
       render :edit
