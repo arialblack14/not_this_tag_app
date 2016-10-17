@@ -26,8 +26,11 @@
       </div>
     </div>
     <% end %>
+
+    <div class="pagination">
     <% if @posts.any? %>
       <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
     <% end %>
+    </div>
   </div>
 </div>
